@@ -2,7 +2,7 @@ import math
 
 TESTNUM=600851475143
 
-testrange=range(1,TESTNUM)
+testrange=range(1,775147)
 
 #if TESTNUM % 2==0:
 #	print TESTNUM % 2, 1
