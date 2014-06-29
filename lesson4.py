@@ -1,17 +1,27 @@
 my_integer=9009
+IMAX = 1000
+IMIN = 100
+JMAX = 1000
+JMIN = 100
 
-number_string=str(my_integer)
+irange = range(IMIN,IMAX)
+jrange = range(JMIN,JMAX)
+irange = irange[::-1]
+jrange = jrange[::-1]
 stitch_num = ''
-str_length=len(number_string)
+reverse_st = ''
+ibreak=0
+palin = []
 
-for ch in number_string:
-	print ch
-	stitch_num = stitch_num+ch
-	reverse_st=stitch_num[::-1]
-	
-print stitch_num, reverse_st
+for i in irange:
+	for j in jrange:
+		test_int = i*j
+		number_string=str(test_int)
+		reverse_st=number_string[::-1]
+		if number_string==reverse_st:
+			palin.append(test_int)
+		else:
+			continue
 
-if stitch_num==reverse_st:
-	print "They the same!!"
-else:
-	print "They ain't the same bro!!"
+print max(palin)
+
